@@ -71,6 +71,14 @@
     <string name="strongly_like">Strongly\nLike</string>
     <string name="neutral">Neutral</string>
 
+    <!-- first questions -->
+    <string name="best_anime_question">Лучшее аниме в истори человечества это:</string>
+    <string name="shingeki">Атака титанов, он же Shingeki no Kyojin, он же Острые козырьки</string>
+
+    <!-- second questions -->
+    <string name="bad_anime_question">Назовите самое бездарное аниме в истории человечества</string>
+    <string name="evangelion">Евангелион</string>
+
     <!-- Permissions-->
     <string name="permissions_rationale">This question requires some permissions. Please grant them.</string>
     <string name="permissions_denied">Permissions were denied. Unfortunately, this question is not available at the moment. Please continue with the survey or grant access to the permissions on the Settings screen.</string>
