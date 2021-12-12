@@ -30,14 +30,12 @@ class SurveyViewModel(
 
     private lateinit var surveyInitialState: SurveyState
 
-    // Uri used to save photos taken with the camera
     private var uri: Uri? = null
 
     init {
         viewModelScope.launch {
-            val survey = surveyRepository.getSurvey()
+            val survey = if (PickedSurveyRepo.pickedSurvey == 1) surveyRepository.getBestAnimeSurvey() else surveyRepository.getBadAnimeSurvey()
 
-            // Create the default questions state based on the survey questions
             val questions: List<QuestionState> = survey.questions.mapIndexed { index, question ->
                 val showPrevious = index > 0
                 val showDone = index == survey.questions.size - 1
@@ -56,7 +54,7 @@ class SurveyViewModel(
 
     fun computeResult(surveyQuestions: SurveyState.Questions) {
         val answers = surveyQuestions.questionsState.mapNotNull { it.answer }
-        val result = surveyRepository.getSurveyResult(answers)
+        val result = if (PickedSurveyRepo.pickedSurvey == 1) surveyRepository.getBestAnimeResult(answers) else surveyRepository.getBadAnimeResult()
         _uiState.value = SurveyState.Result(surveyQuestions.surveyTitle, result)
     }
 

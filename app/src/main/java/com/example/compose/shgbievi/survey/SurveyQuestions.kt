@@ -627,15 +627,6 @@ private fun PhotoQuestion(
             ) {
                 Icon(imageVector = resource, contentDescription = null)
                 Spacer(modifier = Modifier.width(8.dp))
-                Text(
-                    text = stringResource(
-                        id = if (answer != null) {
-                            R.string.retake_photo
-                        } else {
-                            R.string.add_photo
-                        }
-                    )
-                )
             }
         }
     }
@@ -749,35 +740,6 @@ private fun SliderQuestion(
             modifier = Modifier
                 .fillMaxWidth()
                 .weight(1.8f)
-        )
-    }
-}
-
-@Preview
-@Composable
-fun QuestionPreview() {
-    val question = Question(
-        id = 2,
-        questionText = R.string.pick_superhero,
-        answer = PossibleAnswer.SingleChoice(
-            optionsStringRes = listOf(
-                R.string.spark,
-                R.string.lenz,
-                R.string.bugchaos,
-                R.string.frag
-            )
-        ),
-        description = R.string.select_one
-    )
-    JetsurveyTheme {
-        Question(
-            question = question,
-            shouldAskPermissions = true,
-            answer = null,
-            onAnswer = {},
-            onAction = { _, _ -> },
-            onDoNotAskForPermissions = {},
-            openSettings = {}
         )
     }
 }

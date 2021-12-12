@@ -31,7 +31,6 @@ class SignUpFragment : Fragment() {
         }
 
         return ComposeView(requireContext()).apply {
-            // In order for savedState to work, the same ID needs to be used for all instances.
             id = R.id.sign_up_fragment
 
             layoutParams = ViewGroup.LayoutParams(

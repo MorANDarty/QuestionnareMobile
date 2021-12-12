@@ -22,22 +22,22 @@
     app:startDestination="@+id/welcome_fragment">
     <fragment
         android:id="@+id/welcome_fragment"
-        android:name="com.example.compose.jetsurvey.signinsignup.WelcomeFragment"
+        android:name="com.example.compose.shgbievi.signinsignup.WelcomeFragment"
         android:label="Welcome">
     </fragment>
     <fragment
         android:id="@+id/sign_in_fragment"
-        android:name="com.example.compose.jetsurvey.signinsignup.SignInFragment"
+        android:name="com.example.compose.shgbievi.signinsignup.SignInFragment"
         android:label="Sign in">
     </fragment>
     <fragment
         android:id="@+id/sign_up_fragment"
-        android:name="com.example.compose.jetsurvey.signinsignup.SignUpFragment"
+        android:name="com.example.compose.shgbievi.signinsignup.SignUpFragment"
         android:label="Sign up">
     </fragment>
     <fragment
         android:id="@+id/survey_fragment"
-        android:name="com.example.compose.jetsurvey.survey.SurveyFragment"
+        android:name="com.example.compose.shgbievi.survey.SurveyFragment"
         android:label="Survey">
     </fragment>
 </navigation>
